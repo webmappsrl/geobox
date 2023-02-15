@@ -4,6 +4,7 @@
 ### Geohub 
  - DOCKER_SERVE_PORT:8001
  - DOCKER_PHP_PORT:9101
+ - DOCKER_PSQL_PORT: 5501
  - GITREPO: https://github.com/webmappsrl/geohub2
  - URLDEV: https://geohub.dev.maphub.it
  - URLPROD: 
@@ -12,6 +13,7 @@
 ### OSM2CAI
  - DOCKER_SERVE_PORT:8002
  - DOCKER_PHP_PORT:9102
+ - DOCKER_PSQL_PORT: 5502
  - GITREPO: 
  - URLDEV: 
  - URLPROD: 
@@ -20,6 +22,7 @@
 ### EUMA
  - DOCKER_SERVE_PORT:8003
  - DOCKER_PHP_PORT:9103
+ - DOCKER_PSQL_PORT: 5503
  - GITREPO: 
  - URLDEV: 
  - URLPROD: 
@@ -28,6 +31,7 @@
 ### SISTECO
  - DOCKER_SERVE_PORT:8004
  - DOCKER_PHP_PORT:9104
+ - DOCKER_PSQL_PORT: 5504
  - GITREPO: 
  - URLDEV: 
  - URLPROD: 
@@ -39,6 +43,7 @@
 ### PRC_FEATURES
  - DOCKER_SERVE_PORT:8050
  - DOCKER_PHP_PORT:9150
+ - DOCKER_PSQL_PORT: 5550
  - GITREPO: https://github.com/webmappsrl/prc-features
  - URLDEV: https://prc-features.dev.maphub.it
  - URLPROD: 
@@ -47,6 +52,7 @@
 ### PRC_TAXONOMIES 
  - DOCKER_SERVE_PORT:8051
  - DOCKER_PHP_PORT:9151
+ - DOCKER_PSQL_PORT: 5551
  - GITREPO: https://github.com/webmappsrl/prc-taxonomies
  - URLDEV: https://prc-taxonomies.dev.maphub.it
  - URLPROD: 
@@ -55,6 +61,7 @@
 ### PRC_IMAGES
  - DOCKER_SERVE_PORT:8052
  - DOCKER_PHP_PORT:9152
+ - DOCKER_PSQL_PORT: 5552
  - GITREPO: 
  - URLDEV: 
  - URLPROD: 
@@ -64,6 +71,7 @@
 ### HOQU
  - DOCKER_SERVE_PORT:8000
  - DOCKER_PHP_PORT:9100
+ - DOCKER_PSQL_PORT: 5500
  - GITREPO: https://github.com/webmappsrl/hoqu2
  - URLDEV: https://hoqu.dev.maphub.it
  - URLPROD: 
@@ -72,6 +80,7 @@
 ### ORCHESTRATOR
  - DOCKER_SERVE_PORT:8099
  - DOCKER_PHP_PORT:9199
+ - DOCKER_PSQL_PORT: 5599
  - GITREPO: 
  - URLDEV: 
  - URLPROD: 
