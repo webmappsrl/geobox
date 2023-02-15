@@ -5,7 +5,7 @@
  - DOCKER_SERVE_PORT:8001
  - DOCKER_PHP_PORT:9101
  - GITREPO: https://github.com/webmappsrl/geohub2
- - URLDEV: 
+ - URLDEV: https://geohub.dev.maphub.it
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
 
@@ -39,17 +39,17 @@
 ### PRC_FEATURES
  - DOCKER_SERVE_PORT:8050
  - DOCKER_PHP_PORT:9150
- - GITREPO: 
- - URLDEV: 
+ - GITREPO: https://github.com/webmappsrl/prc-features
+ - URLDEV: https://prc-features.dev.maphub.it
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
 
 ### PRC_TAXONOMIES 
  - DOCKER_SERVE_PORT:8051
  - DOCKER_PHP_PORT:9151
- - GITREPO:, 
- - URLDEV:, 
- - URLPROD: , 
+ - GITREPO: https://github.com/webmappsrl/prc-taxonomies
+ - URLDEV: https://prc-taxonomies.dev.maphub.it
+ - URLPROD: 
  - STATO: IN PROGRESS
 
 ### PRC_IMAGES
@@ -64,8 +64,8 @@
 ### HOQU
  - DOCKER_SERVE_PORT:8000
  - DOCKER_PHP_PORT:9100
- - GITREPO: 
- - URLDEV: 
+ - GITREPO: https://github.com/webmappsrl/hoqu2
+ - URLDEV: https://hoqu.dev.maphub.it
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
 
