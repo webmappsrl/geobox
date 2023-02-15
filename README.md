@@ -3,10 +3,10 @@
 # GEOBOX2
 
 ## Table of contents
-[Introduction](#introduction)
+[Introduction](#introduction)  
 [Architecture](https://github.com/webmappsrl/geobox/blob/main/ARCHITECTURE.md)  
-[How to install a local instance of GEOBOX2](https://github.com/webmappsrl/geobox/blob/main/INSTALL.md)
-[Aliases](#aliases)
+[How to install a local instance of GEOBOX2](https://github.com/webmappsrl/geobox/blob/main/INSTALL.md)  
+[Aliases](#aliases)  
 
 
 ## Introduction
