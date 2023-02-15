@@ -1,6 +1,6 @@
 # Architettura:
 
-## Caller (Main Data Store)
+## Caller (MDS / Main Data Store)
 ### Geohub 
  - DOCKER_SERVE_PORT:8001
  - DOCKER_PHP_PORT:9101
@@ -34,7 +34,8 @@
  - STATO DI SVILUPPO: DA INIZIARE
 
 
-## Processor
+## Processor (BDS / Basic Data Store)
+
 ### PRC_FEATURES
  - DOCKER_SERVE_PORT:8050
  - DOCKER_PHP_PORT:9150
