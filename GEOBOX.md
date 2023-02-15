@@ -5,7 +5,7 @@
  - DOCKER_SERVE_PORT:8001
  - DOCKER_PHP_PORT:9101
  - GITREPO: https://github.com/webmappsrl/geohub2
- - URLDEV: https://dev.geohub.maphub.it
+ - URLDEV: 
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
 
