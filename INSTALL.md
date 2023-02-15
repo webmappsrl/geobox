@@ -1,97 +1,18 @@
-# Architettura:
-
-## Caller (MDS / Main Data Store)
-### Geohub 
- - DOCKER_SERVE_PORT:8001
- - DOCKER_PHP_PORT:9101
- - GITREPO: https://github.com/webmappsrl/geohub2
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: IN PROGRESS
-
-### OSM2CAI
- - DOCKER_SERVE_PORT:8002
- - DOCKER_PHP_PORT:9102
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: DA INIZIARE
-
-### EUMA
- - DOCKER_SERVE_PORT:8003
- - DOCKER_PHP_PORT:9103
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: DA INIZIARE
-
-### SISTECO
- - DOCKER_SERVE_PORT:8004
- - DOCKER_PHP_PORT:9104
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: DA INIZIARE
-
-
-## Processor (BDS / Basic Data Store)
-
-### PRC_FEATURES
- - DOCKER_SERVE_PORT:8050
- - DOCKER_PHP_PORT:9150
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: IN PROGRESS
-
-### PRC_TAXONOMIES 
- - DOCKER_SERVE_PORT:8051
- - DOCKER_PHP_PORT:9151
- - GITREPO:, 
- - URLDEV:, 
- - URLPROD: , 
- - STATO: IN PROGRESS
-
-### PRC_IMAGES
- - DOCKER_SERVE_PORT:8052
- - DOCKER_PHP_PORT:9152
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: DA INIZIARE
-
-## General Purpose
-### HOQU
- - DOCKER_SERVE_PORT:8000
- - DOCKER_PHP_PORT:9100
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: IN PROGRESS
-
-### ORCHESTRATOR
- - DOCKER_SERVE_PORT:8099
- - DOCKER_PHP_PORT:9199
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
- - STATO DI SVILUPPO: IN PROGRESS
-
 # Installazione ambiente di sviluppo
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
-- [Installazione ambiente di sviluppo](#-installazione-ambiente-di-sviluppo)
-  - [Metodo 1: 2 container per ogni istanza](#-metodo-1-2-container-per-ogni-istanza)
-    - [Obiettivo](#-obiettivo)
-      - [Il problema delle porte dei container](#-il-problema-delle-porte-dei-container)
-      - [Il mounting della cartella wm-package](#-il-mounting-della-cartella-wm-package)
-    - [Istruzioni](#-istruzioni)
-    - [Risoluzione dei problemi](#-risoluzione-dei-problemi)
-    - [Comandi utili](#-comandi-utili)
-  - [Considerazioni su un ipotetico metodo 2: solo 2 container](#-considerazioni-su-un-ipotetico-metodo-2-solo-2-container)
+- [Installazione ambiente di sviluppo](#installazione-ambiente-di-sviluppo)
+  - [Metodo 1: 2 container per ogni istanza](#metodo-1-2-container-per-ogni-istanza)
+    - [Obiettivo](#obiettivo)
+      - [Il problema delle porte dei container](#il-problema-delle-porte-dei-container)
+      - [Il mounting della cartella wm-package](#il-mounting-della-cartella-wm-package)
+    - [Istruzioni](#istruzioni)
+    - [Risoluzione dei problemi](#risoluzione-dei-problemi)
+    - [Comandi utili](#comandi-utili)
+  - [Considerazioni su un ipotetico metodo 2: solo 2 container](#considerazioni-su-un-ipotetico-metodo-2-solo-2-container)
 
 <!-- /code_chunk_output -->
 
