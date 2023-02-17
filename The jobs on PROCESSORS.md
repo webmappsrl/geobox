@@ -1,6 +1,6 @@
 # Jobs for Processor Instances
 
-The Processor instances in this Laravel project contain only Laravel jobs that are implementations of the `AbstractProcessorJob` abstract class, which can be found in the `vendor/wm/wm-package/src/Jobs` directory. This abstract class extends the default Laravel Job and implements the `ProcessorJobInterface` interface. Processor jobs that inherit from this abstract class have the following characteristics:
+The Processor instances contain only Laravel jobs that are implementations of the `AbstractProcessorJob` abstract class, which can be found in the `vendor/wm/wm-package/src/Jobs` directory. This abstract class extends the default Laravel Job and implements the `ProcessorJobInterface` interface. Processor jobs that inherit from this abstract class have the following characteristics:
 
 - They have an `hoqu_job_id` and `input` properties inside their payloads.
 - They have some methods to interact with these properties.
