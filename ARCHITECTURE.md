@@ -81,7 +81,7 @@
  - DOCKER_SERVE_PORT:8099
  - DOCKER_PHP_PORT:9199
  - DOCKER_PSQL_PORT: 5599
- - GITREPO: 
- - URLDEV: 
+ - GITREPO: https://github.com/webmappsrl/orchestrator
+ - URLDEV: https://orchestrator.dev.maphub.it
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
