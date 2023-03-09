@@ -85,3 +85,16 @@
  - URLDEV: https://orchestrator.dev.maphub.it
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
+
+
+## TABLE VISUALIZATON
+
+|                       | **Geohub**                                   | **OSM2CAI** | **EUMA**    | **SISTECO** | **PRC_FEATURES**                                        | **PRC_TAXONOMIES**                                         | **PRC_IMAGES** | **HOQU**                                   | **ORCHESTRATOR**                                       |
+|-----------------------|----------------------------------------------|-------------|-------------|-------------|---------------------------------------------------------|------------------------------------------------------------|----------------|--------------------------------------------|--------------------------------------------------------|
+| **DOCKER_SERVE_PORT** | 8001                                         | 8002        | 8003        | 8004        | 8050                                                    | 8051                                                       | 8052           | 8000                                       | 8099                                                   |
+| **DOCKER_PHP_PORT**   | 9101                                         | 9102        | 9103        | 9104        | 9150                                                    | 9151                                                       | 9152           | 9100                                       | 9199                                                   |
+| **DOCKER_PSQL_PORT**  | 5501                                         | 5502        | 5503        | 5504        | 5550                                                    | 5551                                                       | 5552           | 5500                                       | 5599                                                   |
+| **GITREPO**           | [git](https://github.com/webmappsrl/geohub2) |             |             |             | [git](https://github.com/webmappsrl/prc-features)       | [git](https://github.com/webmappsrl/prc-taxonomies)        |                | [git](https://github.com/webmappsrl/hoqu2) | [git](https://github.com/webmappsrl/orchestrator)      |
+| **URLDEV**            | [geohub.dev](https://geohub.dev.maphub.it)   |             |             |             | [prc-feartures.dev](https://prc-features.dev.maphub.it) | [prc-taxonomies.dev](https://prc-taxonomies.dev.maphub.it) |                | [hoqu.dev](https://hoqu.dev.maphub.it)     | [orchestrator.dev](https://orchestrator.dev.maphub.it) |
+| **URLPROD**           | [geohub](https://geohub.maphub.it)           |             |             |             | [prc-feartures](https://prc-features.maphub.it)         | [prc-taxonomies](https://prc-taxonomies.maphub.it)         |                | [hoqu](https://hoqu.maphub.it)             | [orchestrator](https://orchestrator.maphub.it)         |
+| **STATO DI SVILUPPO** | IN PROGRESS                                  | DA INIZIARE | DA INIZIARE | DA INIZIARE | IN PROGRESS                                             | IN PROGRESS                                                | DA INIZIARE    | IN PROGRESS                                | IN PROGRESS                                            |
