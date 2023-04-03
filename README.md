@@ -39,5 +39,28 @@ geobox_serve [instance]
 geobox_psql [instance]
 geobox_deploy_andserve [instance]
 geobox_install [instance]
+geobox_dump [instance]
+geobox_dump_archive [instance]
+geobox_dump_restore [instance]
 ```
 
+## Create a dump of the database
+To Create a dump if the database use this command:
+```sh
+geobox_dump_archive [instance]
+```
+It creates a dump of the database under the /storage/backups of the given instance, first one named with the current date and a copy of it named with last-dump.sql.gz.
+And it automatically removes the dumps older than 14 days.
+
+## Restore the last-dump.sql from the AWS
+In order to restore the lates dump of the production use this command:
+```sh
+geobox_dump_restore [instance]
+```
+**Note**
+To make it work in you local invironment you have to create the symbolic link of /var/www/html to you instances repository. Example:
+```sh
+sudo ln -s /Users/Pedram/code/maphub /var/www/html
+```
+
+This command will wipe you database and download the latest copy pf the database from AWS and insert it in the instance's database.

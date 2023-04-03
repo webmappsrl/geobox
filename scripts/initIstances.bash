@@ -2,47 +2,47 @@
 
 
 function sleepNow {
-  echo " SLEEPING .... "
-  sleep 20
+  echo " SLEEPING .... 4 sec"
+  sleep 4
 }
 
 
 function printHoquJobStatus {
   cd '../hoqu2'
   echo "HoquJob status:"
-  php artisan tinker --execute="dump( \App\Models\HoquJob::first()->status->name )"
+  docker exec php81_hoqu2 php artisan tinker --execute="dump( \App\Models\HoquJob::first()->status->name )"
 }
 
-cd /var/www/html/webmapp/daje
+cd ..
 
 
+echo "hoqu2"
 cd hoqu2
-php artisan migrate:fresh
-php artisan hoqu:create-register-user --password="test"
-php artisan route:clear
-php artisan config:clear
+docker exec php81_hoqu2 php artisan migrate:fresh
+docker exec php81_hoqu2 php artisan hoqu:create-register-user --password="test"
+docker exec php81_hoqu2 php artisan optimize
 
+echo "../prc-features"
 cd ../prc-features
-php artisan migrate:fresh
-php artisan hoqu:register-user \
-  --endpoint "http://prc-features.mydev" \
+docker exec php81_prc-features php artisan migrate:fresh
+docker exec php81_prc-features php artisan hoqu:register-user \
+  --endpoint "http://host.docker.internal:8050" \
   --role "processor" \
   --capabilities 'AddAreaToTracks'
-php artisan route:clear
-php artisan config:clear
+docker exec php81_prc-features php artisan optimize
 
 
+echo "../geohub2"
 cd ../geohub2
-php artisan migrate:fresh
-php artisan hoqu:register-user --endpoint "http://geohub2.mydev"
-php artisan route:clear
-php artisan config:clear
+docker exec php81_geohub2 php artisan migrate:fresh
+docker exec php81_geohub2 php artisan hoqu:register-user --endpoint "http://host.docker.internal:8001"
+docker exec php81_geohub2 php artisan optimize
 
 echo "############# GEOHUB 2 send STORE ############"
 
 
-php artisan tinker --execute="\App\Models\EcTrack::create(['name'=>'test','user_id'=>1, 'description' => 'VALUE TO CHANGE AFTER DONE DONE']);"
-php artisan hoqu:store --class="AddAreaToTracks" --featureId=1 --field="description" --model="\App\Models\EcTrack" --input="{}"
+docker exec php81_geohub2 php artisan tinker --execute="\App\Models\EcTrack::create(['name'=>'test','user_id'=>1, 'description' => 'VALUE TO CHANGE AFTER DONE DONE']);"
+docker exec --env-file .env php81_geohub2 php artisan hoqu:store --class="AddAreaToTracks" --featureId=1 --field="description" --model="\App\Models\EcTrack" --input="{}"
 
 printHoquJobStatus
 sleepNow
@@ -50,7 +50,7 @@ sleepNow
 echo "############# HOQU 2 queue: store ############"
 
 cd ../hoqu2
-php artisan queue:work --queue store --once
+docker exec --env-file .env php81_hoqu2 php artisan queue:work --queue store --once
 
 printHoquJobStatus
 sleepNow
@@ -58,7 +58,7 @@ sleepNow
 echo "############# PROCESSOR 2 queue: process ############"
 
 cd ../prc-features
-php artisan queue:work --queue process --once
+docker exec --env-file .env php81_prc-features php artisan queue:work --queue process --once
 
 printHoquJobStatus
 sleepNow
@@ -66,7 +66,7 @@ sleepNow
 echo "############# HOQU 2 queue: done ############"
 
 cd ../hoqu2
-php artisan queue:work --queue done --once
+docker exec --env-file .env php81_hoqu2 php artisan queue:work --queue done --once
 
 
 printHoquJobStatus
