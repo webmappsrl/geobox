@@ -57,10 +57,18 @@ In order to restore the lates dump of the production use this command:
 ```sh
 geobox_dump_restore [instance]
 ```
-**Note**
+**Important Note**
 To make it work in you local invironment you have to create the symbolic link of /var/www/html to you instances repository. Example:
 ```sh
+sudo mkdir /var/www
 sudo ln -s /Users/Pedram/code/maphub /var/www/html
+```
+And copy the AWS credentials from .env of another project or contact the Developer.
+```sh
+AWS_DEFAULT_REGION
+AWS_DUMPS_SECRET_ACCESS_KEY
+AWS_DUMPS_BUCKET
+AWS_DUMPS_ACCESS_KEY_ID
 ```
 
 This command will wipe you database and download the latest copy pf the database from AWS and insert it in the instance's database.

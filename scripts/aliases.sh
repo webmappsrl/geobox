@@ -46,6 +46,7 @@ function geobox_dump_archive() {
 			gzip -f "last-dump.sql"
 			find "$backupDirPath" -type f -mtime +$backupDayNum -name "*.gz" -delete
 			docker exec -i php81_$1 php artisan db:upload_db_aws "$fileName.gz"
+			cd "/var/www/html/$1"
 	fi
 }
 

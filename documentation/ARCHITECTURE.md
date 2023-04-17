@@ -32,9 +32,9 @@
  - DOCKER_SERVE_PORT:8004
  - DOCKER_PHP_PORT:9104
  - DOCKER_PSQL_PORT: 5504
- - GITREPO: 
- - URLDEV: 
- - URLPROD: 
+ - GITREPO: https://github.com/webmappsrl/sisteco2
+ - URLDEV: https://sisteco.dev.maphub.it
+ - URLPROD: https://sisteco.maphub.it
  - STATO DI SVILUPPO: DA INIZIARE
 
 
@@ -89,12 +89,14 @@
 
 ## TABLE VISUALIZATON
 
-|                       | **Geohub**                                   | **OSM2CAI** | **EUMA**    | **SISTECO** | **PRC_FEATURES**                                        | **PRC_TAXONOMIES**                                         | **PRC_IMAGES** | **HOQU**                                   | **ORCHESTRATOR**                                       |
-|-----------------------|----------------------------------------------|-------------|-------------|-------------|---------------------------------------------------------|------------------------------------------------------------|----------------|--------------------------------------------|--------------------------------------------------------|
-| **DOCKER_SERVE_PORT** | 8001                                         | 8002        | 8003        | 8004        | 8050                                                    | 8051                                                       | 8052           | 8000                                       | 8099                                                   |
-| **DOCKER_PHP_PORT**   | 9101                                         | 9102        | 9103        | 9104        | 9150                                                    | 9151                                                       | 9152           | 9100                                       | 9199                                                   |
-| **DOCKER_PSQL_PORT**  | 5501                                         | 5502        | 5503        | 5504        | 5550                                                    | 5551                                                       | 5552           | 5500                                       | 5599                                                   |
-| **GITREPO**           | [git](https://github.com/webmappsrl/geohub2) |             |             |             | [git](https://github.com/webmappsrl/prc-features)       | [git](https://github.com/webmappsrl/prc-taxonomies)        |                | [git](https://github.com/webmappsrl/hoqu2) | [git](https://github.com/webmappsrl/orchestrator)      |
-| **URLDEV**            | [geohub.dev](https://geohub.dev.maphub.it)   |             |             |             | [prc-feartures.dev](https://prc-features.dev.maphub.it) | [prc-taxonomies.dev](https://prc-taxonomies.dev.maphub.it) |                | [hoqu.dev](https://hoqu.dev.maphub.it)     | [orchestrator.dev](https://orchestrator.dev.maphub.it) |
-| **URLPROD**           | [geohub](https://geohub.maphub.it)           |             |             |             | [prc-feartures](https://prc-features.maphub.it)         | [prc-taxonomies](https://prc-taxonomies.maphub.it)         |                | [hoqu](https://hoqu.maphub.it)             | [orchestrator](https://orchestrator.maphub.it)         |
-| **STATO DI SVILUPPO** | IN PROGRESS                                  | DA INIZIARE | DA INIZIARE | DA INIZIARE | IN PROGRESS                                             | IN PROGRESS                                                | DA INIZIARE    | IN PROGRESS                                | IN PROGRESS                                            |
+|                    | **DOCKER_SERVE_PORT** | **DOCKER_PHP_PORT** | **DOCKER_PSQL_PORT** | **GITREPO**                                         | **URLDEV**                                                 | **URLPROD**                                        | **STATO DI SVILUPPO** |
+|--------------------|-----------------------|---------------------|----------------------|-----------------------------------------------------|------------------------------------------------------------|----------------------------------------------------|-----------------------|
+| **Geohub**         | 8001                  | 9101                | 5501                 | [git](https://github.com/webmappsrl/geohub2)        | [geohub.dev](https://geohub.dev.maphub.it)                 | [geohub](https://geohub.maphub.it)                 | IN PROGRESS           |
+| **OSM2CAI**        | 8002                  | 9102                | 5502                 |                                                     |                                                            |                                                    | DA INIZIARE           |
+| **EUMA**           | 8003                  | 9103                | 5503                 |                                                     |                                                            |                                                    | DA INIZIARE           |
+| **SISTECO**        | 8004                  | 9104                | 5504                 | [git](https://github.com/webmappsrl/sisteco2)       | [sisteco.dev](https://sisteco.dev.maphub.it)               | [sisteco](https://sisteco.maphub.it)               | IN PROGRESS           |
+| **PRC_FEATURES**   | 8050                  | 9150                | 5550                 | [git](https://github.com/webmappsrl/prc-features)   | [prc-feartures.dev](https://prc-features.dev.maphub.it)    | [prc-feartures](https://prc-features.maphub.it)    | IN PROGRESS           |
+| **PRC_TAXONOMIES** | 8051                  | 9151                | 5551                 | [git](https://github.com/webmappsrl/prc-taxonomies) | [prc-taxonomies.dev](https://prc-taxonomies.dev.maphub.it) | [prc-taxonomies](https://prc-taxonomies.maphub.it) | IN PROGRESS           |
+| **PRC_IMAGES**     | 8052                  | 9152                | 5552                 |                                                     |                                                            |                                                    | DA INIZIARE           |
+| **HOQU**           | 8000                  | 9100                | 5500                 | [git](https://github.com/webmappsrl/hoqu2)          | [hoqu.dev](https://hoqu.dev.maphub.it)                     | [hoqu](https://hoqu.maphub.it)                     | IN PROGRESS           |
+| **ORCHESTRATOR**   | 8099                  | 9199                | 5599                 | [git](https://github.com/webmappsrl/orchestrator)   | [orchestrator.dev](https://orchestrator.dev.maphub.it)     | [orchestrator](https://orchestrator.maphub.it)     | IN PROGRESS           |
