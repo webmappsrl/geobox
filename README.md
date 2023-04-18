@@ -18,6 +18,8 @@ The GEOBOX (GBX) is a digital ecosystem that simplifies the process of publishin
 4. Use of data by end users
 
 
+## TODO: General info on geobox2 local INSTALL
+
 ## Aliases
 In order to simplify in a local develop environment the access to different docker cointainers download this repository and add aliases script to your shell configuration file (eg. .zshrc)
 
