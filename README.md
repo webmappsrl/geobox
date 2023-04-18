@@ -20,7 +20,7 @@ The GEOBOX (GBX) is a digital ecosystem that simplifies the process of publishin
 
 ## TODO: General info on geobox2 local INSTALL
 
-## Aliases
+## Aliases and GLOBAL shell variable
 In order to simplify in a local develop environment the access to different docker cointainers download this repository and add aliases script to your shell configuration file (eg. .zshrc)
 
 ```sh
@@ -30,7 +30,8 @@ git clone git@github.com:webmappsrl/geobox.git
 Add the following line to your shell configuration file:
 
 ```sh
-source /path/to/geobox/scripts/aliases.sh
+export GEOBOX_PATH=/Users/alessiopiccioli/Documents/geobox2
+source $GEOBOX_PATH/geobox/scripts/aliases.sh
 ```
 
 After this reload the configuration (or close and open again your shell) and the following commands will be available on your shell:
