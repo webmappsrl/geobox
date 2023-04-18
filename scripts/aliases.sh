@@ -50,9 +50,10 @@ function geobox_dump_archive() {
 	fi
 }
 
+#TODO: check if GEBOX_PATH Is defined, not empty and the path is existing
 function geobox_dump_restore() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	backupDirPath="/var/www/html/$1/storage/app/database"
+	backupDirPath="$GEOBOX_PATH/$1/storage/app/database"
 	docker exec -i php81_$1 php artisan db:wipe
 	docker exec -i php81_$1 php artisan db:download && zless "$backupDirPath/last-dump.sql.gz" | docker exec -i postgres_$1 psql -U $1 $1
 	docker exec -i php81_$1 php artisan migrate
