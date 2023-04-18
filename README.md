@@ -18,7 +18,9 @@ The GEOBOX (GBX) is a digital ecosystem that simplifies the process of publishin
 4. Use of data by end users
 
 
-## TODO: General info on geobox2 local INSTALL
+## General info on geobox instances INSTALLATION
+In order to user the geobox commands all the geobox instances should be installed in the same directory.
+Exapmle: /Users/Name/geobox
 
 ## Aliases and GLOBAL shell variable
 In order to simplify in a local develop environment the access to different docker cointainers download this repository and add aliases script to your shell configuration file (eg. .zshrc)
@@ -27,10 +29,10 @@ In order to simplify in a local develop environment the access to different dock
 git clone git@github.com:webmappsrl/geobox.git
 ```
 
-Add the following line to your shell configuration file:
+Add the following line to your shell configuration file (eg. .zshrc):
 
 ```sh
-export GEOBOX_PATH=/Users/alessiopiccioli/Documents/geobox2
+export GEOBOX_PATH=/absolute/path/to/your/geobox/folder
 source $GEOBOX_PATH/geobox/scripts/aliases.sh
 ```
 
@@ -61,12 +63,8 @@ In order to restore the lates dump of the production use this command:
 geobox_dump_restore [instance]
 ```
 **Important Note**
-To make it work in you local invironment you have to create the symbolic link of /var/www/html to you instances repository. Example:
-```sh
-sudo mkdir /var/www
-sudo ln -s /Users/Pedram/code/maphub /var/www/html
-```
-And copy the AWS credentials from .env of another project or contact the Developer.
+
+To make it work in your local invironment you have to copy the AWS credentials from .env of another project or contact the Developer. (remove the duplications)
 ```sh
 AWS_DEFAULT_REGION
 AWS_DUMPS_SECRET_ACCESS_KEY
