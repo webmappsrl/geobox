@@ -36,6 +36,14 @@
  - URLDEV: https://sisteco.dev.maphub.it
  - URLPROD: https://sisteco.maphub.it
  - STATO DI SVILUPPO: DA INIZIARE
+### MPT2
+ - DOCKER_SERVE_PORT:8005
+ - DOCKER_PHP_PORT:9105
+ - DOCKER_PSQL_PORT: 5505
+ - GITREPO: https://github.com/webmappsrl/mpt2
+ - URLDEV: https://mpt.dev.maphub.it
+ - URLPROD: https://mpt.maphub.it
+ - STATO DI SVILUPPO: IN PROGRESS
 
 
 ## Processor (BDS / Basic Data Store)
@@ -95,6 +103,7 @@
 | **OSM2CAI**        | 8002                  | 9102                | 5502                 |                                                     |                                                            |                                                    | DA INIZIARE           |
 | **EUMA**           | 8003                  | 9103                | 5503                 |                                                     |                                                            |                                                    | DA INIZIARE           |
 | **SISTECO**        | 8004                  | 9104                | 5504                 | [git](https://github.com/webmappsrl/sisteco2)       | [sisteco.dev](https://sisteco.dev.maphub.it)               | [sisteco](https://sisteco.maphub.it)               | IN PROGRESS           |
+| **MPT2**           | 8005                  | 9105                | 5505                 | [git](https://github.com/webmappsrl/mpt2)           | [mpt.dev](https://mpt.dev.maphub.it)                       | [mpt](https://mpt.maphub.it)                       | IN PROGRESS           |
 | **PRC_FEATURES**   | 8050                  | 9150                | 5550                 | [git](https://github.com/webmappsrl/prc-features)   | [prc-feartures.dev](https://prc-features.dev.maphub.it)    | [prc-feartures](https://prc-features.maphub.it)    | IN PROGRESS           |
 | **PRC_TAXONOMIES** | 8051                  | 9151                | 5551                 | [git](https://github.com/webmappsrl/prc-taxonomies) | [prc-taxonomies.dev](https://prc-taxonomies.dev.maphub.it) | [prc-taxonomies](https://prc-taxonomies.maphub.it) | IN PROGRESS           |
 | **PRC_IMAGES**     | 8052                  | 9152                | 5552                 |                                                     |                                                            |                                                    | DA INIZIARE           |

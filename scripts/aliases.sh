@@ -50,7 +50,6 @@ function geobox_dump_archive() {
 	fi
 }
 
-#TODO: check if GEBOX_PATH Is defined, not empty and the path is existing
 function geobox_dump_restore() {
 	if [ -z "$1" ]; then geobox_help && return; fi
 
