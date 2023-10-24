@@ -1,3 +1,7 @@
+function geobox_list() {
+	for i in $(docker ps --format "table {{.Names}}" | grep php81); do echo ${i#php81_}; done | sort
+}
+
 function geobox() {
 	if [ -z "$1" ]; then geobox_help && return; fi
 	docker exec -it php81_$1 bash
@@ -74,6 +78,7 @@ function geobox_help() {
 	echo ""
 	echo "Available commands : the parameter [instance] refers to the name of the APP corresponding to the container"
 	echo ""
+	echo "geobox_list : list all available instances"
 	echo "geobox [instance] : enter the docker container"
 	echo "geobox_serve [instance] : start the web server (php artisan serve)"
 	echo "geobox_psql [instance] : enter psql"
