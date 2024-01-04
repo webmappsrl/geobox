@@ -85,13 +85,22 @@
  - URLPROD: 
  - STATO DI SVILUPPO: IN PROGRESS
 
+### DEM
+ - DOCKER_SERVE_PORT:8098
+ - DOCKER_PHP_PORT:9198
+ - DOCKER_PSQL_PORT: 5598
+ - GITREPO: https://github.com/webmappsrl/dem
+ - URLDEV: https://dem.dev.maphub.it
+ - URLPROD: https://dem.maphub.it
+ - STATO DI SVILUPPO: IN PROGRESS
+
 ### ORCHESTRATOR
  - DOCKER_SERVE_PORT:8099
  - DOCKER_PHP_PORT:9199
  - DOCKER_PSQL_PORT: 5599
  - GITREPO: https://github.com/webmappsrl/orchestrator
  - URLDEV: https://orchestrator.dev.maphub.it
- - URLPROD: 
+ - URLPROD: https://orchestrator.maphub.it
  - STATO DI SVILUPPO: IN PROGRESS
 
 
@@ -108,4 +117,5 @@
 | **PRC_TAXONOMIES** | 8051                  | 9151                | 5551                 | [git](https://github.com/webmappsrl/prc-taxonomies) | [prc-taxonomies.dev](https://prc-taxonomies.dev.maphub.it) | [prc-taxonomies](https://prc-taxonomies.maphub.it) | IN PROGRESS           |
 | **PRC_IMAGES**     | 8052                  | 9152                | 5552                 |                                                     |                                                            |                                                    | DA INIZIARE           |
 | **HOQU**           | 8000                  | 9100                | 5500                 | [git](https://github.com/webmappsrl/hoqu2)          | [hoqu.dev](https://hoqu.dev.maphub.it)                     | [hoqu](https://hoqu.maphub.it)                     | IN PROGRESS           |
+| **DEM**   | 8098                  | 9198                | 5598                 | [git](https://github.com/webmappsrl/dem)   | [dem.dev](https://dem.dev.maphub.it)     | [dem](https://dem.maphub.it)     | IN PROGRESS           |
 | **ORCHESTRATOR**   | 8099                  | 9199                | 5599                 | [git](https://github.com/webmappsrl/orchestrator)   | [orchestrator.dev](https://orchestrator.dev.maphub.it)     | [orchestrator](https://orchestrator.maphub.it)     | IN PROGRESS           |
