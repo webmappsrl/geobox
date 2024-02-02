@@ -70,7 +70,7 @@
 - DOCKER_PSQL_PORT: 5507
 - GITREPO: https://github.com/webmappsrl/carg
 - URLDEV: https://carg.dev.maphub.it
-- URLPROD: https://carg.maphub.it
+- URLPROD:
 - STATO DI SVILUPPO: IN PROGRESS
 
 ## Processor (BDS / Basic Data Store)
