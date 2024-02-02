@@ -63,6 +63,16 @@
 - URLPROD: https://osmfeatures.maphub.it
 - STATO DI SVILUPPO: IN PROGRESS
 
+- ### CARG
+
+- DOCKER_SERVE_PORT:8007
+- DOCKER_PHP_PORT:9107
+- DOCKER_PSQL_PORT: 5507
+- GITREPO: https://github.com/webmappsrl/carg
+- URLDEV: https://carg.dev.maphub.it
+- URLPROD: https://carg.maphub.it
+- STATO DI SVILUPPO: IN PROGRESS
+
 ## Processor (BDS / Basic Data Store)
 
 ### PRC_FEATURES
