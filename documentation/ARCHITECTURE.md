@@ -63,7 +63,7 @@
 - URLPROD: https://osmfeatures.maphub.it
 - STATO DI SVILUPPO: IN PROGRESS
 
-- ### CARG
+### CARG
 
 - DOCKER_SERVE_PORT:8007
 - DOCKER_PHP_PORT:9107
