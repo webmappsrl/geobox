@@ -78,10 +78,10 @@
 - DOCKER_SERVE_PORT:8008
 - DOCKER_PHP_PORT:9108
 - DOCKER_PSQL_PORT: 5508
-- GITREPO:
-- URLDEV:
-- URLPROD:
-- STATO DI SVILUPPO: DA INIZIARE
+- GITREPO: https://github.com/webmappsrl/osm2cai2
+- URLDEV: https://osm2cai2.dev.maphub.it
+- URLPROD: https://osm2cai.maphub.it
+- STATO DI SVILUPPO: IN PROGRESS
 
 ## Processor (BDS / Basic Data Store)
 
