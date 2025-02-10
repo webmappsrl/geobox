@@ -1,35 +1,35 @@
 function geobox_list() {
-	for i in $(docker ps --format "table {{.Names}}" | grep php81); do echo ${i#php81_}; done | sort
+	for i in $(docker ps --format "table {{.Names}}" | grep php); do echo ${i#php_}; done | sort
 }
 
 function geobox() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it php81_$1 bash
+	docker exec -it php_$1 bash
 }
 
 function geobox_serve() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it php81_$1 php artisan serve --host 0.0.0.0
+	docker exec -it php_$1 composer run dev
 }
 
 function geobox_psql() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it postgres_$1 psql -U $1
+	docker exec -it db_$1 psql -U $1
 }
 
 function geobox_deploy_and_serve() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it php81_$1 bash scripts/deploy_local_with_seed_and_serve.sh
+	docker exec -it php_$1 bash scripts/deploy_local_with_seed_and_serve.sh
 }
 
 function geobox_install() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it php81_$1 bash scripts/deploy_local_first.sh
+	docker exec -it php_$1 bash scripts/deploy_local_first.sh
 }
 
 function geobox_dump() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -i postgres_$1 pg_dump -U $1 $1
+	docker exec -i db_$1 pg_dump -U $1 $1
 }
 
 function geobox_dump_archive() {
@@ -49,7 +49,7 @@ function geobox_dump_archive() {
 			gzip -f "$fileName"
 			gzip -f "last-dump.sql"
 			find "$backupDirPath" -type f -mtime +$backupDayNum -name "*.gz" -delete
-			docker exec -i php81_$1 php artisan db:upload_db_aws "$fileName.gz"
+			docker exec -i php_$1 php artisan db:upload_db_aws "$fileName.gz"
 			cd "/var/www/html/$1"
 	fi
 }
@@ -65,9 +65,9 @@ function geobox_dump_restore() {
 	fi
 
 	backupDirPath="$GEOBOX_PATH/$1/storage/app/database"
-	docker exec -i php81_$1 php artisan db:wipe
-	docker exec -i php81_$1 php artisan db:download && zless "$backupDirPath/last-dump.sql.gz" | docker exec -i postgres_$1 psql -U $1 $1
-	docker exec -i php81_$1 php artisan migrate
+	docker exec -i php_$1 php artisan db:wipe
+	docker exec -i php_$1 php artisan db:download && zless "$backupDirPath/last-dump.sql.gz" | docker exec -i db_$1 psql -U $1 $1
+	docker exec -i php_$1 php artisan migrate
 }
 
 function geobox_help() {
