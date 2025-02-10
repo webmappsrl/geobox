@@ -14,7 +14,7 @@ function geobox_serve() {
 
 function geobox_psql() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -it db_$1 psql -U $1
+	docker exec -it postgres_$1 psql -U $1
 }
 
 function geobox_deploy_and_serve() {
@@ -29,7 +29,7 @@ function geobox_install() {
 
 function geobox_dump() {
 	if [ -z "$1" ]; then geobox_help && return; fi
-	docker exec -i db_$1 pg_dump -U $1 $1
+	docker exec -i postgres_$1 pg_dump -U $1 $1
 }
 
 function geobox_dump_archive() {
@@ -66,7 +66,7 @@ function geobox_dump_restore() {
 
 	backupDirPath="$GEOBOX_PATH/$1/storage/app/database"
 	docker exec -i php_$1 php artisan db:wipe
-	docker exec -i php_$1 php artisan db:download && zless "$backupDirPath/last-dump.sql.gz" | docker exec -i db_$1 psql -U $1 $1
+	docker exec -i php_$1 php artisan db:download && zless "$backupDirPath/last-dump.sql.gz" | docker exec -i postgres_$1 psql -U $1 $1
 	docker exec -i php_$1 php artisan migrate
 }
 
