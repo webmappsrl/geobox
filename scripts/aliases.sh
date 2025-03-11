@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function geobox_list() {
 	for i in $(docker ps --format "table {{.Names}}" | grep php); do echo ${i#php_}; done | sort
 }
@@ -5,11 +7,26 @@ function geobox_list() {
 function geobox() {
 	if [ -z "$1" ]; then geobox_help && return; fi
 	docker exec -it php_$1 bash
+	##LEGACY HANDLER ... because this is the most used command
+	if [ $? -ne 0 ]; then
+    	echo "php_$1 container not found, trying with the legacy one"
+		geobox_v1 $1
+	fi
+}
+
+function geobox_v1() {
+	if [ -z "$1" ]; then geobox_help && return; fi
+	docker exec -it php81_$1 bash
 }
 
 function geobox_serve() {
 	if [ -z "$1" ]; then geobox_help && return; fi
 	docker exec -it php_$1 composer run dev
+}
+
+function geobox_v1_serve() {
+	if [ -z "$1" ]; then geobox_help && return; fi
+	docker exec -it php81_$1 php artisan serve --host 0.0.0.0
 }
 
 function geobox_psql() {
@@ -78,14 +95,18 @@ function geobox_help() {
 	echo ""
 	echo "Available commands : the parameter [instance] refers to the name of the APP corresponding to the container"
 	echo ""
+	echo "------------------- V2 -------------------"
 	echo "geobox_list : list all available instances"
-	echo "geobox [instance] : enter the docker container"
-	echo "geobox_serve [instance] : start the web server (php artisan serve)"
+	echo "geobox [instance] : enter into the docker container"
+	echo "geobox_serve [instance] : start the web server for development"
 	echo "geobox_psql [instance] : enter psql"
-	echo "geobox_deploy_and_serve [instance] : deploy (composer install, migration) and serve"
+	echo "geobox_help : display this help text"
+	echo "------------------- V1 -------------------"
+	echo "geobox_v1 [instance] : enter into the docker container with the legacy boilerplate apps"
+	echo "geobox_v1_serve [instance] : start the web server for development with the legacy boilerplate apps"
 	echo "geobox_install [instance] : install (only first time)"
+	echo "geobox_deploy_and_serve [instance] : deploy (composer install, migration) and serve"
 	echo "geobox_dump [instance] : creates a dump of the database of the given instance on the fly without saving it. Usage in geobox_dump_archive()."
 	echo "geobox_dump_archive [instance] : dump the database and save it as .sql.gz for tha last 14 days"
 	echo "geobox_dump_restore [instance] : downloads and restores the latest dump from AWS to the database"
-	echo ""
 }
